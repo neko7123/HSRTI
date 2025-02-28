@@ -1,81 +1,35 @@
-# ESP8266 Ultrasonic Sensor Data Logger with ThingSpeak & Android App
+# Rail Track Inspection System
 
-## 📌 Project Overview
-This project uses an **ESP8266** (Arduino UNO D1 WiFi) to collect real-time distance measurements from **ultrasonic sensors** and uploads the data to **ThingSpeak** for remote monitoring. Additionally, an **Android app (built with Kotlin)** retrieves and displays the data for easy visualization.
+![WhatsApp Image 2025-02-02 at 20 54 20_704b5dad](https://github.com/user-attachments/assets/6026823e-01f1-49e7-8650-94fb45061bd4)
 
-## 🛠 Features
-- Real-time distance measurement using **four ultrasonic sensors** (HC-SR04)
-- **WiFi connectivity** for uploading data to ThingSpeak
-- **Android app** (built with Kotlin) for displaying sensor data
-- **Data logging & cloud storage** for remote access
 
-## 🏗 Hardware Requirements
-- **ESP8266 (NodeMCU/Arduino UNO D1 WiFi)**
-- **4× HC-SR04 Ultrasonic Sensors**
-- **Jumper Wires**
-- **5V Power Supply** (for sensors & ESP8266)
+## Overview
+The Rail Track Inspection System is an innovative solution designed to enhance railway safety and maintenance. This system collects ultrasonic data from railway tracks while moving at high speeds (15 km/hr to 120 km/hr). The collected data is analyzed using a machine learning model to predict potential faults in the railway track before they occur.
 
-## 📲 Software Requirements
-- **Arduino IDE** (for ESP8266 programming)
-- **ESP8266 Board Package** installed in Arduino IDE
-- **Kotlin-based Android App** (for mobile monitoring)
-- **ThingSpeak API Key** (for cloud data storage)
+## Key Features
+- **Real-Time Data Collection:** Ultrasonic sensors gather precise track data at varying speeds.
+- **AI-Based Fault Prediction:** An ML model analyzes data to detect patterns and forecast upcoming issues.
+- **Location-Based Alerts:** The system provides the exact location of potential faults.
+- **User-Friendly Mobile App:** A dedicated Android application (built with Kotlin) allows railway personnel to access fault predictions and diagnostics.
+- **Preventive Maintenance:** Helps authorities take proactive measures, minimizing disruptions and accidents.
 
-## 🔧 Circuit Diagram & Connections
-| Sensor | Trig Pin (ESP8266) | Echo Pin (ESP8266) |
-|--------|-------------------|-------------------|
-| Left 1 | D7 | D8 |
-| Left 2 | D2 | A0 |
-| Right 1 | D5 | D6 |
-| Right 2 | D3 | D4 |
+## How It Works
+1. The system is mounted on a railway vehicle and collects ultrasonic data from the tracks.
+2. The collected data is transmitted for real-time analysis.
+3. The machine learning model processes the data and identifies potential faults.
+4. The Android app displays alerts with the exact fault location, expected time of occurrence, and a suggested diagnosis.
+5. Railway maintenance teams can take action based on predictive insights.
 
-**Note:** Ensure that each sensor has a stable **5V power supply** for accurate measurements.
+## Benefits
+- **Enhanced Safety:** Early fault detection reduces the risk of derailments and accidents.
+- **Efficient Maintenance Planning:** Helps railway authorities schedule repairs proactively.
+- **Cost Savings:** Reduces maintenance costs by addressing issues before they become critical.
+- **Automation & Accuracy:** Eliminates manual inspections and provides more accurate results.
 
-## 🚀 Setup Instructions
-### 1️⃣ ESP8266 Configuration
-1. Install **Arduino IDE**
-2. Add ESP8266 support in **Boards Manager**
-3. Install required libraries: `ESP8266WiFi`, `WiFiClient`
-4. Upload the provided **ESP8266 code**
-5. Replace WiFi SSID & password in the sketch
-6. Get a ThingSpeak **API key** and update it in the code
-7. Flash the code onto ESP8266
+## Future Enhancements
+- Integration with cloud storage for historical data analysis.
+- Expansion to support additional sensor types for comprehensive monitoring.
+- Advanced AI models for improved prediction accuracy.
 
-### 2️⃣ ThingSpeak Setup
-1. Create a **ThingSpeak account**
-2. Set up a new **channel**
-3. Note the **API key** and update it in the ESP8266 code
-
-### 3️⃣ Android App Setup
-1. Install **Android Studio**
-2. Clone the **Kotlin-based app repository**
-3. Replace the ThingSpeak API key in the app’s code
-4. Build & install the app on an Android device
-
-## 📡 Data Flow
-1. **ESP8266 reads** distances from ultrasonic sensors
-2. **Uploads data** to ThingSpeak every second
-3. **Android app retrieves** data from ThingSpeak and displays it
-
-## 🔍 Troubleshooting
-- **WiFi Not Connecting?** Check SSID & password in the ESP8266 code.
-- **ThingSpeak Not Updating?** Ensure your API key is correct.
-- **Corrupt Serial Output?** Set baud rate to **115200** in Serial Monitor.
-- **Android App Not Displaying Data?** Ensure the API key is correctly entered in the app.
-
-## 📌 Future Enhancements
-- Add **MQTT support** for real-time updates
-- Implement **push notifications** for sensor alerts
-- Improve **UI/UX of Android app**
-
-## 🤝 Contributions
-Feel free to contribute by optimizing the **ESP8266 code** or improving the **Android app UI**.
-
-## 📜 License
-This project is open-source under the **MIT License**. Use and modify freely!
-
----
-
-### 📧 Contact
-For any questions or support, reach out to **Narong** (Project Developer).
+This project aims to revolutionize railway maintenance by leveraging advanced technology for safer and more efficient track monitoring.
 
