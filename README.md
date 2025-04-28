@@ -12,7 +12,7 @@ An integrated GPS module provides exact fault locations, and a trained machine l
 # Key Features
 
 1. Real-Time Rail Monitoring:
-2. 
+
 Captures rail track condition data dynamically even at high speeds.
 
 3. High-Precision Sampling:
